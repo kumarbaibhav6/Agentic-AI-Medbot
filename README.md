@@ -9,7 +9,7 @@
 - 🧩 **Agent-based architecture** for modular task delegation.
 - 🔎 **Dense retrieval** using FAISS and OpenAI embeddings.
 - 🧠 **RAG-based response generation** with GPT-4 or Claude.
-- 🧪 Optional **response validation** for medical safety.
+- 🌐 **Wikipedia agent fallback** when no relevant vector data is found.
 - 📦 Easily extensible with new tools, agents, or graphs.
 
 ---
@@ -19,7 +19,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/agentic-medbot.git
+git clone https://github.com/kumarbaibhav6/Agentic-AI-Medbot.git
 cd agentic-medbot
 ```
 
@@ -64,8 +64,8 @@ python main.py
 1. **User submits a query** (e.g., "What causes chest pain?")
 2. **Vector retrieval agent** finds relevant medical conversations.
 3. **RAG generation agent** combines user input + context to generate an answer.
-4. **Validation agent** (optional) checks for safety and hallucinations.
-5. **Formatter agent** prepares the response for display or API delivery.
+4. If **no relevant context is found**, a **Wikipedia agent** is triggered as a fallback source.
+5. Final response is returned directly to the user.
 
 ---
 
@@ -121,6 +121,7 @@ You can replace this file with any similar medical conversation dataset.
 Issues and suggestions are welcome!
 
 ---
+
 ## 📫 Contact
 
 Feel free to reach out via GitHub Issues or email: `baibhav06june@gmail.com`
